@@ -13,10 +13,23 @@ body {
   background: #212121;
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  color: white;
 }
 
 .title {
-  color: white;
   font-family: 'patchy-robots';
-  font-size: 10vh;
+  font-size: 5vw;
+}
+
+.content {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.content-item {
+  display: flex;
+  flex-grow: 1;
+  margin: 10px;
 }
