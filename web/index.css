@@ -32,11 +32,10 @@ body {
 }
 
 .tails-gif {
-  height: 18vw;
-  width 18vw;
+  height: 20vw;
 }
 
 .yt-video {
-  height: 18vw;
-  width: 32vw;
+  height: 20vw;
+  aspect-ratio: 16/9;
 }
