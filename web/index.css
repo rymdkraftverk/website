@@ -20,16 +20,23 @@ body {
 .title {
   font-family: 'patchy-robots';
   font-size: 5vw;
+  margin: 30px;
 }
 
 .content {
-  margin-top: 30px;
   display: flex;
-  justify-content: center;
 }
 
 .content-item {
-  display: flex;
-  flex-grow: 1;
   margin: 10px;
+}
+
+.tails-gif {
+  height: 18vw;
+  width 18vw;
+}
+
+.yt-video {
+  height: 18vw;
+  width: 32vw;
 }
