@@ -27,16 +27,15 @@ body {
   display: flex;
 }
 
-.content-item {
+.content > * {
   margin: 10px;
 }
 
-.tails-gif {
+.content > * * {
   height: 20vw;
 }
 
 .yt-video {
-  height: 20vw;
   aspect-ratio: 16/9;
 }
 
