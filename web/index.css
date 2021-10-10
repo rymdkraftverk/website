@@ -39,3 +39,8 @@ body {
   height: 20vw;
   aspect-ratio: 16/9;
 }
+
+.contact {
+  margin: 30px;
+  font-size: 2vw;
+}
