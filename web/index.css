@@ -41,6 +41,13 @@ body {
 }
 
 .contact {
-  margin: 30px;
-  font-size: 2vw;
+  display: flex;
+}
+
+.contact > * {
+  margin: 10px;
+}
+
+.contact > a > img {
+  height: 2vw;
 }
