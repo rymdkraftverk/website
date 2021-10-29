@@ -23,7 +23,9 @@ body {
 }
 
 .weirdo-gif {
-  height: 268;
+  height: 268px;
+  width: 270px;
+  object-fit: cover;
 }
 
 .pad  {
