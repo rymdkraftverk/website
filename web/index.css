@@ -3,11 +3,6 @@
   src: url('patchy-robots.otf');
 }
 
-html, body {
-  height: 100%;
-  margin: 0;
-}
-
 body {
   align-items: center;
   background: #212121;
@@ -23,28 +18,25 @@ body {
   margin: 30px;
 }
 
-.content {
+.gifs  {
   display: flex;
 }
 
-.content > * {
-  margin: 10px;
+.weirdo-gif {
+  height: 268;
 }
 
-.content > * * {
-  height: 20vw;
+.pad  {
+  margin: 10px;
 }
 
 .yt-video {
   aspect-ratio: 16/9;
+  width: 100%;
 }
 
 .contact {
   display: flex;
-}
-
-.contact > * {
-  margin: 10px;
 }
 
 .contact > a > img {
