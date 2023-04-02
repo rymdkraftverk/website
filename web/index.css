@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'patchy-robots';
-  src: url('patchy-robots.otf');
+  font-family: "patchy-robots";
+  src: url("patchy-robots.otf");
 }
 
 body {
@@ -13,12 +13,12 @@ body {
 }
 
 .title {
-  font-family: 'patchy-robots';
+  font-family: "patchy-robots";
   font-size: 5vw;
   margin: 30px;
 }
 
-.gifs  {
+.gifs {
   display: flex;
 }
 
@@ -28,7 +28,7 @@ body {
   object-fit: cover;
 }
 
-.pad  {
+.pad {
   margin: 10px;
 }
 
