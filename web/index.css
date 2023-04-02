@@ -14,7 +14,7 @@ body {
 
 .title {
   font-family: "patchy-robots";
-  font-size: 5vw;
+  font-size: 4rem;
   margin: 30px;
 }
 
@@ -42,5 +42,19 @@ body {
 }
 
 .contact > a > img {
-  height: 2vw;
+  height: 2rem;
+}
+
+@media (max-width: 650px) {
+  .title {
+    font-size: 9vw;
+  }
+
+  .gifs {
+    flex-direction: column;
+  }
+
+  .pad {
+    margin: 5px;
+  }
 }
