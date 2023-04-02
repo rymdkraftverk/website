@@ -10,10 +10,10 @@ body {
   justify-content: center;
   flex-direction: column;
   color: white;
+  font-family: "patchy-robots";
 }
 
 .title {
-  font-family: "patchy-robots";
   font-size: 4rem;
   margin: 30px;
 }
@@ -43,6 +43,52 @@ body {
 
 .contact > a > img {
   height: 2rem;
+}
+
+.nav {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-family: "patchy-robots";
+}
+
+.nav > a {
+  text-decoration: none;
+  color: white;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-items: center;
+  align-items: center;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  filter: grayscale(100%);
+}
+
+.profile-links {
+  display: flex;
+  gap: 10px;
+}
+
+.profile-links img {
+  width: 30px;
+  height: 30px;
 }
 
 @media (max-width: 650px) {
