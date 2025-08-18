@@ -3,56 +3,80 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Rymdkraftverk - Digital Experiences & Creative Technology. Creating interactive storytelling experiences and experimental game mechanics.">
+  <meta name="keywords" content="Rymdkraftverk, digital experiences, creative technology, interactive storytelling, game development">
 
-  <title>Rymdkraftverk</title>
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://rymdkraftverk.com/">
+  <meta property="og:title" content="Rymdkraftverk">
+  <meta property="og:description" content="Digital Experiences & Creative Technology. Creating interactive storytelling experiences and experimental game mechanics.">
+  <meta property="og:image" content="https://rymdkraftverk.com/logo.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://rymdkraftverk.com/">
+  <meta property="twitter:title" content="Rymdkraftverk">
+  <meta property="twitter:description" content="Digital Experiences & Creative Technology. Creating interactive storytelling experiences and experimental game mechanics.">
+  <meta property="twitter:image" content="https://rymdkraftverk.com/logo.png">
+
+  <title>Rymdkraftverk - Digital Experiences</title>
 
   <link rel='icon' type='image/x-icon' href='favicon.ico' />
   <link rel='stylesheet' href='index.css'>
+  <link rel="preload" href="patchy-robots.otf" as="font" type="font/otf" crossorigin>
 </head>
 <body>
   <nav class="nav">
     <a href="team.html">Team</a>
   </nav>
-  <header >
+  <header>
     <h1 class='title'>Rymdkraftverk</h1>
+    <p class='tagline'>Digital Experiences</p>
   </header>
   <main>
     <div class='gifs'>
-      <div class='pad'>
-        <a href='http://tails.rymdkraftverk.com/'>
-          <img src='./tails.gif'/>
+      <div class='project'>
+        <a href='http://tails.rymdkraftverk.com/' target='_blank'>
+          <img src='./tails.gif' alt='Tails project preview' width='270' height='268'/>
         </a>
       </div>
-      <div class='pad'>
-        <a href='http://sticky-feet.rymdkraftverk.com/'>
-          <img class='weirdo-gif' src='./sticky-feet.gif'/>
+      <div class='project'>
+        <a href='http://sticky-feet.rymdkraftverk.com/' target='_blank'>
+          <img class='weirdo-gif' src='./sticky-feet.gif' alt='Sticky Feet project preview' width='270' height='268'/>
         </a>
       </div>
     </div>
-    <div>
+    <div class='video-section'>
+      <p class='video-caption'>Made possible by functional excellence</p>
       <div class='pad'>
         <iframe
             class ='yt-video'
             src='https://www.youtube.com/embed/ADqLBc1vFwI'
             title='YouTube video player'
             frameborder='0'
-            allowFullscreen>
+            allowFullscreen
+            loading='lazy'>
         </iframe>
       </div>
     </div>
   </main>
-  <footer class='contact'>
-    <a class='pad' href='mailto:contact@rymdkraftverk.com'>
-      <img src='email.png'/>
-    </a>
+  <footer>
+    <hr class='footer-separator'>
+    <div class='contact'>
+      <a href='mailto:contact@rymdkraftverk.com' aria-label='Email us'>
+        <img src='email.png' alt='Email'/>
+      </a>
 
-    <a class='pad' href='https://github.com/rymdkraftverk' target='_blank'>
-      <img src='github.png'/>
-    </a>
+      <a href='https://github.com/rymdkraftverk' target='_blank' aria-label='Visit our GitHub'>
+        <img src='github.png' alt='GitHub'/>
+      </a>
 
-    <a class='pad' href='https://twitter.com/rymdkraftverk' target='_blank'>
-      <img src='twitter.png'/>
-    </a>
+      <a href='https://twitter.com/rymdkraftverk' target='_blank' aria-label='Follow us on Twitter'>
+        <img src='twitter.png' alt='Twitter'/>
+      </a>
+    </div>
+    <p class='copyright'>© 2025 Rymdkraftverk</p>
   </footer>
 
 </body>
