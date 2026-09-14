@@ -18,7 +18,7 @@
           buildInputs = [
             just
             prettier
-            python3
+            deno
             fpcloud.packages.${system}.default
           ];
         };

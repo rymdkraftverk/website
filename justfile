@@ -4,7 +4,7 @@ default:
 # ── dev ─────────────────────────────────────────────────────────────────────
 
 serve:
-    python -m http.server --directory web 4321
+    deno run --allow-net --allow-read jsr:@std/http/file-server --port 4321 web
 
 # ── quality ─────────────────────────────────────────────────────────────────
 
