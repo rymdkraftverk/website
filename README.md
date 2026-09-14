@@ -1,10 +1,12 @@
 # Setup
 
-Nothing to install. Edit `web/`, open the files in a browser.
+`direnv allow` gives you the dev shell. `just` lists every command.
+
+`just serve` runs the site locally from `web/`.
 
 # Update website
 
 Push to `master`. GitHub Actions deploys `web/` to the fpcloud website
 `website`, served at rymdkraftverk.com.
 
-To deploy by hand: `fpcloud website deploy website web --org rkv --project website`.
+`just deploy` does the same by hand, `just rollback` undoes it.

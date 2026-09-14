@@ -14,8 +14,11 @@
         pkgs = import nixpkgs { inherit system; };
       in
       {
-        devShells.default = pkgs.mkShell {
+        devShells.default = with pkgs; mkShell {
           buildInputs = [
+            just
+            prettier
+            python3
             fpcloud.packages.${system}.default
           ];
         };

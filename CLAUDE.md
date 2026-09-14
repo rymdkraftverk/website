@@ -8,14 +8,16 @@ This is a minimal static website for Rymdkraftverk, hosted as an fpcloud website
 
 ## Development Workflow
 
+`just` lists every command; anything run in this repo is a recipe.
+
 ### Local Development
 - Edit files directly in the `web/` directory
-- Test using any local web server (e.g., `python -m http.server` from the web/ directory)
+- `just serve` runs a local web server from `web/`
+- `just static-qa` checks formatting, `just static-fix` rewrites it
 - No build process required
 
 ### Deployment
 Push to `master`; `.github/workflows/deploy.yml` syncs `web/` to the fpcloud
 website `website` (project `website`, org `rkv`), which serves rymdkraftverk.com.
-`fpcloud website deploy website web` does the same by hand, and
-`fpcloud website rollback website` undoes a deploy.
-- The website name and project live in the workflow file
+`just deploy` does the same by hand, and `just rollback` undoes a deploy.
+- The website name and project live in the workflow file and the `justfile`
