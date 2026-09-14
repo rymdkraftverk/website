@@ -15,8 +15,8 @@ jobs:
 
       - uses: fogpipe/cloud-actions/auth@v1
         with:
-          service-account: a41e68ad-192a-4d38-aa77-0c65b48c6446
+          service-account: a14028e4-c833-416d-a82b-f05d798ae426
 
       - run: curl -fsSL https://raw.githubusercontent.com/fogpipe/cloud-cli/main/install.sh | sh
 
-      - run: fpcloud website deploy website web --org rkv --project games
+      - run: fpcloud website deploy website web --org rkv --project website

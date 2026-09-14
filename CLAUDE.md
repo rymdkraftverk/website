@@ -15,7 +15,7 @@ This is a minimal static website for Rymdkraftverk, hosted as an fpcloud website
 
 ### Deployment
 Push to `master`; `.github/workflows/deploy.yml` syncs `web/` to the fpcloud
-website `website` (project `games`, org `rkv`), which serves rymdkraftverk.com.
+website `website` (project `website`, org `rkv`), which serves rymdkraftverk.com.
 `fpcloud website deploy website web` does the same by hand, and
 `fpcloud website rollback website` undoes a deploy.
 - The website name and project live in the workflow file
