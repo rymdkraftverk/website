@@ -4,7 +4,7 @@ default:
 # ── dev ─────────────────────────────────────────────────────────────────────
 
 serve:
-    python -m http.server --directory web
+    python -m http.server --directory web 4321
 
 # ── quality ─────────────────────────────────────────────────────────────────
 
