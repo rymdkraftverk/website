@@ -32,6 +32,32 @@ html {
   scroll-behavior: smooth;
 }
 
+@view-transition {
+  navigation: auto;
+}
+
+::view-transition-group(*) {
+  animation-duration: 0.65s;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.3s;
+}
+
+::view-transition-old(brand),
+::view-transition-old(team) {
+  display: none;
+}
+
+::view-transition-new(brand),
+::view-transition-new(team) {
+  animation: none;
+  width: 100%;
+  height: 100%;
+}
+
 body {
   background: var(--bg);
   color: var(--fg);
@@ -50,7 +76,6 @@ body {
   text-align: center;
   letter-spacing: 0.05em;
   font-weight: normal;
-  animation: fadeIn 0.8s ease-out;
 }
 
 .nav {
@@ -62,6 +87,7 @@ body {
 
 .nav > a {
   text-decoration: none;
+  display: inline-block;
   color: var(--fg);
   padding: 12px 24px;
   border: 2px solid transparent;
@@ -297,6 +323,12 @@ footer {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
+  }
+
   *,
   *::before,
   *::after {
@@ -355,4 +387,17 @@ footer {
     width: 140px;
     height: 140px;
   }
+}
+
+.brand,
+.team {
+  display: inline-block;
+}
+
+.brand {
+  view-transition-name: brand;
+}
+
+.team {
+  view-transition-name: team;
 }
