@@ -53,45 +53,66 @@
     </nav>
     <header>
       <h1 class="title">Rymdkraftverk</h1>
-      <p class="tagline">Digital Experiences</p>
     </header>
     <main>
-      <div class="gifs">
-        <div class="project">
-          <a href="http://tails.rymdkraftverk.com/" target="_blank">
-            <img
-              src="./tails.gif"
-              alt="Tails project preview"
-              width="270"
-              height="268"
-            />
-          </a>
-        </div>
-        <div class="project">
-          <a href="http://sticky-feet.rymdkraftverk.com/" target="_blank">
-            <img
-              class="weirdo-gif"
-              src="./sticky-feet.gif"
-              alt="Sticky Feet project preview"
-              width="270"
-              height="268"
-            />
-          </a>
-        </div>
+      <div class="projects">
+        <a
+          class="project"
+          href="https://tails.rymdkraftverk.com/"
+          target="_blank"
+          aria-label="Play Tails"
+        >
+          <video
+            class="project-media"
+            autoplay
+            muted
+            loop
+            playsinline
+            poster="tails.jpg"
+            width="320"
+            height="238"
+          >
+            <source src="tails.webm" type="video/webm" />
+            <source src="tails.mp4" type="video/mp4" />
+          </video>
+        </a>
+        <a
+          class="project"
+          href="https://sticky-feet.rymdkraftverk.com/"
+          target="_blank"
+          aria-label="Play Sticky Feet"
+        >
+          <video
+            class="project-media"
+            autoplay
+            muted
+            loop
+            playsinline
+            poster="sticky-feet.jpg"
+            width="320"
+            height="238"
+          >
+            <source src="sticky-feet.webm" type="video/webm" />
+            <source src="sticky-feet.mp4" type="video/mp4" />
+          </video>
+        </a>
       </div>
       <div class="video-section">
-        <p class="video-caption">Made possible by functional excellence</p>
-        <div class="pad">
-          <iframe
-            class="yt-video"
-            src="https://www.youtube.com/embed/ADqLBc1vFwI"
-            title="YouTube video player"
-            frameborder="0"
-            allowfullscreen
+        <button
+          class="yt-video"
+          type="button"
+          data-video-id="ADqLBc1vFwI"
+          aria-label="Play: Hitler reacts to functional programming"
+        >
+          <img
+            src="video-poster.jpg"
+            alt=""
+            width="1160"
+            height="653"
             loading="lazy"
-          >
-          </iframe>
-        </div>
+          />
+          <span class="yt-play" aria-hidden="true"></span>
+        </button>
       </div>
     </main>
     <footer>
@@ -110,14 +131,26 @@
         </a>
 
         <a
-          href="https://twitter.com/rymdkraftverk"
+          href="https://x.com/rymdkraftverk"
           target="_blank"
-          aria-label="Follow us on Twitter"
+          aria-label="Follow us on X"
         >
-          <img src="twitter.png" alt="Twitter" />
+          <img src="x.png" alt="X" />
         </a>
       </div>
-      <p class="copyright">© 2025 Rymdkraftverk</p>
+      <p class="copyright">© 2026 Rymdkraftverk</p>
     </footer>
+    <script>
+      document.querySelector(".yt-video").addEventListener("click", (e) => {
+        const button = e.currentTarget;
+        const iframe = document.createElement("iframe");
+        iframe.className = "yt-video";
+        iframe.src = `https://www.youtube-nocookie.com/embed/${button.dataset.videoId}?autoplay=1`;
+        iframe.title = "Hitler reacts to functional programming";
+        iframe.allow = "autoplay; fullscreen";
+        iframe.allowFullscreen = true;
+        button.replaceWith(iframe);
+      });
+    </script>
   </body>
 </html>
