@@ -18,13 +18,33 @@
         "type": "github"
       }
     },
+    "fpcloud": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1789333615,
+        "narHash": "sha256-eBUaqOl08t7x3B4OHZ+GLF+SdsIX01lC5alFgqqs/Pk=",
+        "owner": "fogpipe",
+        "repo": "cloud-cli",
+        "rev": "faaaef097d66826d64ddcdfaf10a38467d8da549",
+        "type": "github"
+      },
+      "original": {
+        "owner": "fogpipe",
+        "repo": "cloud-cli",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1755186698,
-        "narHash": "sha256-wNO3+Ks2jZJ4nTHMuks+cxAiVBGNuEBXsT29Bz6HASo=",
+        "lastModified": 1789286504,
+        "narHash": "sha256-eiEK7cKZORNEvX0GeF3RtNEF/JXhgf2RqSp3230q13E=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "fbcf476f790d8a217c3eab4e12033dc4a0f6d23c",
+        "rev": "ef34387ddd751e1ab8857adf4676492d32eb24ec",
         "type": "github"
       },
       "original": {
@@ -37,6 +57,7 @@
     "root": {
       "inputs": {
         "flake-utils": "flake-utils",
+        "fpcloud": "fpcloud",
         "nixpkgs": "nixpkgs"
       }
     },
