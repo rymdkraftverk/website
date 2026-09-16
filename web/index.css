@@ -24,8 +24,9 @@
 :root {
   --bg: #161616;
   --fg: #f5f5f5;
-  --line: rgba(245, 245, 245, 0.12);
-  --radius: 12px;
+  --radius: 6px;
+  --dim: 0.5;
+  --ease: 0.3s ease;
 }
 
 html {
@@ -70,6 +71,17 @@ body {
   align-items: center;
 }
 
+.sprite {
+  display: none;
+}
+
+.icon {
+  display: block;
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+}
+
 .title {
   font-size: clamp(1.6rem, 8vw, 4.5rem);
   margin: 60px 0 60px 0;
@@ -90,15 +102,13 @@ body {
   display: inline-block;
   color: var(--fg);
   padding: 12px 24px;
-  border: 2px solid transparent;
-  border-radius: 6px;
-  transition: all 0.3s ease;
+  transition: opacity var(--ease);
   font-size: 1.1rem;
   letter-spacing: 0.02em;
 }
 
 .nav > a:hover {
-  border-color: var(--fg);
+  opacity: var(--dim);
 }
 
 main {
@@ -126,6 +136,11 @@ main {
   max-width: 100%;
   color: inherit;
   text-decoration: none;
+  transition: opacity var(--ease);
+}
+
+.projects:hover > .project:not(:hover) {
+  opacity: var(--dim);
 }
 
 .project-media {
@@ -136,11 +151,6 @@ main {
   object-fit: cover;
   border-radius: var(--radius);
   background: #000;
-  transition: transform 0.3s ease;
-}
-
-.project:hover .project-media {
-  transform: translateY(-8px);
 }
 
 .video-section {
@@ -171,11 +181,11 @@ main {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.3s ease;
+  transition: opacity var(--ease);
 }
 
 .yt-video:hover > img {
-  transform: scale(1.03);
+  opacity: 0.7;
 }
 
 .yt-play {
@@ -185,9 +195,12 @@ main {
   width: 68px;
   height: 48px;
   transform: translate(-50%, -50%);
-  border-radius: 12px;
+  border-radius: var(--radius);
   background: rgba(22, 22, 22, 0.85);
-  transition: background 0.3s ease;
+  transition:
+    background var(--ease),
+    color var(--ease);
+  color: var(--fg);
 }
 
 .yt-play::after {
@@ -198,11 +211,12 @@ main {
   transform: translate(-40%, -50%);
   border-style: solid;
   border-width: 10px 0 10px 18px;
-  border-color: transparent transparent transparent var(--fg);
+  border-color: transparent transparent transparent currentColor;
 }
 
 .yt-video:hover .yt-play {
-  background: #ff0000;
+  background: var(--fg);
+  color: var(--bg);
 }
 
 footer {
@@ -212,38 +226,30 @@ footer {
   padding-top: 40px;
 }
 
-.footer-separator {
-  border: none;
-  height: 1px;
-  background: var(--line);
-  margin-bottom: 40px;
-}
-
 .contact {
   display: flex;
-  gap: 20px;
+  gap: 32px;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
-.contact > a > img {
-  height: 2.5rem;
-  width: 2.5rem;
-  transition:
-    transform 0.3s ease,
-    opacity 0.3s ease;
-  opacity: 0.8;
+.contact > a {
+  display: block;
+  width: 1.75rem;
+  height: 1.75rem;
+  color: var(--fg);
+  opacity: var(--dim);
+  transition: opacity var(--ease);
 }
 
-.contact > a:hover > img {
-  transform: scale(1.2);
+.contact > a:hover {
   opacity: 1;
 }
 
 .copyright {
   text-align: center;
   font-size: 0.9rem;
-  opacity: 0.5;
+  opacity: var(--dim);
   margin-bottom: 40px;
 }
 
@@ -282,43 +288,28 @@ footer {
   border-radius: 50%;
   margin-bottom: 20px;
   filter: grayscale(100%);
-  transition: all 0.3s ease;
+  transition: filter var(--ease);
 }
 
 .profile:hover .profile-image {
   filter: grayscale(0);
-  transform: translateY(-8px);
 }
 
 .profile-links {
   display: flex;
-  gap: 16px;
+  gap: 24px;
 }
 
-.profile-links a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 8px;
-  border: 1px solid var(--line);
-  transition: all 0.3s ease;
+.profile-links > a {
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--fg);
+  opacity: var(--dim);
+  transition: opacity var(--ease);
 }
 
-.profile-links a:hover {
-  border-color: var(--fg);
-  transform: translateY(-2px);
-}
-
-.profile-links img {
-  width: 24px;
-  height: 24px;
-  opacity: 0.9;
-  transition: opacity 0.3s ease;
-}
-
-.profile-links a:hover img {
+.profile-links > a:hover {
   opacity: 1;
 }
 
@@ -365,11 +356,6 @@ footer {
 
   .yt-video {
     margin-bottom: 40px;
-  }
-
-  .contact {
-    gap: 15px;
-    margin-top: 30px;
   }
 
   footer {
