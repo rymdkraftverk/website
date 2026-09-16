@@ -392,28 +392,32 @@ footer {
   position: fixed;
   top: 0;
   left: 0;
-  width: clamp(140px, 22vw, 300px);
+  width: var(--comet-size, 200px);
   opacity: 0;
   pointer-events: none;
   z-index: -1;
   mask-image: linear-gradient(to left, transparent, #000 40%);
-  animation: comet 32s linear 5s infinite;
+}
+
+.comet.flying {
+  animation: comet var(--comet-duration) linear both;
 }
 
 @keyframes comet {
   0% {
-    transform: translate(105vw, -35vh) rotate(-6deg);
+    transform: translate(var(--comet-from)) translate(-50%, -50%)
+      rotate(var(--comet-angle)) scaleX(var(--comet-flip));
     opacity: 0;
   }
-  1% {
+  10% {
     opacity: 0.3;
   }
-  13% {
+  90% {
     opacity: 0.3;
   }
-  14%,
   100% {
-    transform: translate(-45vw, 95vh) rotate(-6deg);
+    transform: translate(var(--comet-to)) translate(-50%, -50%)
+      rotate(var(--comet-angle)) scaleX(var(--comet-flip));
     opacity: 0;
   }
 }
