@@ -1,5 +1,19 @@
-const comet = document.querySelector(".comet");
 const rand = (min, max) => min + Math.random() * (max - min);
+
+const stars = document.querySelector(".stars");
+stars.append(
+  ...Array.from({ length: 70 }, () => {
+    const star = document.createElement("span");
+    star.style.setProperty("--x", `${rand(0, 100)}%`);
+    star.style.setProperty("--y", `${rand(0, 100)}%`);
+    star.style.setProperty("--size", `${rand(1, 2.5)}px`);
+    star.style.setProperty("--period", `${rand(2, 7)}s`);
+    star.style.setProperty("--phase", `${rand(-7, 0)}s`);
+    return star;
+  }),
+);
+
+const comet = document.querySelector(".comet");
 
 const fly = () => {
   const angle = rand(0, Math.PI * 2);

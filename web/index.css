@@ -421,3 +421,31 @@ footer {
     opacity: 0;
   }
 }
+
+.stars {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -2;
+}
+
+.stars > span {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  background: var(--fg);
+  opacity: 0.2;
+  animation: twinkle var(--period) ease-in-out var(--phase) infinite alternate;
+}
+
+@keyframes twinkle {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 0.6;
+  }
+}
